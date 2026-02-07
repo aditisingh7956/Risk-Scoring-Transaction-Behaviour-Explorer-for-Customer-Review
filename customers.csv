@@ -1,0 +1,7 @@
+customer_id,name,age,occupation,country,account_type,account_age_years
+C001,Amit Sharma,29,Software Engineer,India,Savings,4
+C002,Rahul Verma,22,Student,India,Savings,1
+C003,Sara Khan,41,Business Owner,UAE,Current,7
+C004,John Miller,35,Consultant,USA,Current,5
+C005,Neha Singh,31,Freelancer,India,Savings,3
+C006,Ali Hassan,48,Exporter,UAE,Current,10
