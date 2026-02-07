@@ -1,0 +1,11 @@
+transaction_id,customer_id,date,amount,transaction_type,channel
+T001,C001,2024-09-02,4500,UPI,Mobile App
+T002,C001,2024-10-10,5200,UPI,Mobile App
+T003,C002,2024-10-05,1800,UPI,Mobile App
+T004,C002,2024-10-18,125000,Cash,Branch
+T005,C003,2024-09-12,95000,Wire Transfer,Branch
+T006,C003,2024-09-14,110000,Wire Transfer,Branch
+T007,C004,2024-10-02,40000,Card,Online
+T008,C004,2024-10-20,42000,Card,Online
+T009,C005,2024-09-25,7000,UPI,Mobile App
+T010,C006,2024-10-01,250000,Wire Transfer,Branch
