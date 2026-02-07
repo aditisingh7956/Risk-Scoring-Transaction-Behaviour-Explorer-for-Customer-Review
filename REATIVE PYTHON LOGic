@@ -1,0 +1,26 @@
+import pandas as pd
+
+customers = pd.read_csv("../data/customers.csv")
+transactions = pd.read_csv("../data/transactions.csv")
+
+data = transactions.merge(customers, on="customer_id")
+
+def risk_score(row):
+    score = 0
+    if row["country"] in ["UAE", "Russia"]:
+        score += 25
+    if row["transaction_type"] in ["Cash", "Wire"]:
+        score += 20
+    if row["amount"] > 100000:
+        score += 20
+    return score
+
+data["risk_score"] = data.apply(risk_score, axis=1)
+
+data["risk_reason"] = data.apply(
+    lambda x: "High value transaction in higher-risk context"
+    if x["risk_score"] >= 40 else "Normal behaviour",
+    axis=1
+)
+
+data.to_csv("../outputs/customer_risk_scores.csv", index=False)
